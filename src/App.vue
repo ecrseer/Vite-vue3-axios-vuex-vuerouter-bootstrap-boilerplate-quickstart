@@ -1,30 +1,28 @@
 <template>
-  <h3>Times</h3>
-  <Tabela/>
-  <Formulario/>
+  <div>
+    <div class="collapse" id="navbarToggleExternalContent">
+  <div class="bg-dark p-4">
+    <h5 class="text-white h4">Collapsed content</h5>
+    <span class="text-muted">Toggleable via the navbar brand.</span>
+  </div>
+</div>
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</nav>
+
+
+<div class="d-flex justify-content-center"><h1 class="display-1">Display 1</h1><h1 class="display-1">Display 1</h1><h1 class="display-1">Display 1</h1></div>
+  </div>
 </template>
 
-<script>
-import Formulario from './Formulario.vue'
-import Tabela from './Tabela.vue'
-
-let timeNovo = () => {
-  return {
-    'id': 'INCREMENT',
-    'nome': '',
-    'estado': '',
-    'tecnico': '',
-    'torcida': '',
-    'fundacao_ano': '',
-    'info': ''
-  }
-}
-
+<script> 
+ 
 export default {
-  components: {Tabela, Formulario},
-  mounted() {
-    this.$store.dispatch('carregar')
-  }
+   name:'App'
 }
 </script>
 
